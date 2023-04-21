@@ -118,10 +118,45 @@ namespace Supermarker_MVP.Views
 
         public void show()
         {
-            throw new NotImplementedException();
+            
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void DgPayMode_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tabPagePayModeList_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnNew_Click(object sender, EventArgs e)
         {
 
         }

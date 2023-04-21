@@ -67,8 +67,9 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 150);
+            this.panel1.Size = new System.Drawing.Size(920, 150);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
@@ -98,7 +99,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 150);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 300);
+            this.panel2.Size = new System.Drawing.Size(920, 409);
             this.panel2.TabIndex = 1;
             // 
             // tabControl1
@@ -109,7 +110,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 300);
+            this.tabControl1.Size = new System.Drawing.Size(920, 409);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPagePayModeList
@@ -125,46 +126,51 @@
             this.tabPagePayModeList.Location = new System.Drawing.Point(4, 34);
             this.tabPagePayModeList.Name = "tabPagePayModeList";
             this.tabPagePayModeList.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePayModeList.Size = new System.Drawing.Size(792, 262);
+            this.tabPagePayModeList.Size = new System.Drawing.Size(912, 371);
             this.tabPagePayModeList.TabIndex = 0;
             this.tabPagePayModeList.Text = "Pay Mode List";
             this.tabPagePayModeList.UseVisualStyleBackColor = true;
+            this.tabPagePayModeList.Click += new System.EventHandler(this.tabPagePayModeList_Click);
             // 
             // BtnClose
             // 
-            this.BtnClose.Location = new System.Drawing.Point(654, 127);
+            this.BtnClose.Location = new System.Drawing.Point(681, 202);
             this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(112, 34);
+            this.BtnClose.Size = new System.Drawing.Size(121, 40);
             this.BtnClose.TabIndex = 8;
             this.BtnClose.Text = "Close";
             this.BtnClose.UseVisualStyleBackColor = true;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(654, 87);
+            this.BtnDelete.Location = new System.Drawing.Point(681, 131);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(112, 34);
+            this.BtnDelete.Size = new System.Drawing.Size(121, 40);
             this.BtnDelete.TabIndex = 7;
             this.BtnDelete.Text = "Delete";
             this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // BtnEdit
             // 
-            this.BtnEdit.Location = new System.Drawing.Point(654, 47);
+            this.BtnEdit.Location = new System.Drawing.Point(681, 63);
             this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(112, 34);
+            this.BtnEdit.Size = new System.Drawing.Size(121, 40);
             this.BtnEdit.TabIndex = 6;
             this.BtnEdit.Text = "Edit";
             this.BtnEdit.UseVisualStyleBackColor = true;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // BtnNew
             // 
-            this.BtnNew.Location = new System.Drawing.Point(654, 7);
+            this.BtnNew.Location = new System.Drawing.Point(681, 7);
             this.BtnNew.Name = "BtnNew";
-            this.BtnNew.Size = new System.Drawing.Size(112, 34);
+            this.BtnNew.Size = new System.Drawing.Size(121, 40);
             this.BtnNew.TabIndex = 5;
             this.BtnNew.Text = "New";
             this.BtnNew.UseVisualStyleBackColor = true;
+            this.BtnNew.Click += new System.EventHandler(this.BtnNew_Click);
             // 
             // DgPayMode
             // 
@@ -176,17 +182,18 @@
             this.DgPayMode.ReadOnly = true;
             this.DgPayMode.RowHeadersWidth = 62;
             this.DgPayMode.RowTemplate.Height = 33;
-            this.DgPayMode.Size = new System.Drawing.Size(584, 121);
+            this.DgPayMode.Size = new System.Drawing.Size(584, 197);
             this.DgPayMode.TabIndex = 3;
+            this.DgPayMode.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgPayMode_CellContentClick);
             // 
             // BtnSearch
             // 
+            this.BtnSearch.Image = global::Supermarker_MVP.Properties.Resources.search_small;
             this.BtnSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnSearch.Location = new System.Drawing.Point(487, 0);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(105, 39);
+            this.BtnSearch.Size = new System.Drawing.Size(114, 45);
             this.BtnSearch.TabIndex = 2;
-            this.BtnSearch.Text = "Search";
             this.BtnSearch.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnSearch.UseVisualStyleBackColor = true;
             this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
@@ -303,7 +310,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(920, 559);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "PayModeView";

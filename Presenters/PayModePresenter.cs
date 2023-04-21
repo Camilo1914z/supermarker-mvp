@@ -12,11 +12,13 @@ namespace Supermarker_MVP.Presenters
     {
         private IPayModeView view;
         private IPayModeRepository repository;
-        private BindingSource payModeBindinSource;
+        private BindingSource payModeBindingSource;
         private IEnumerable<PayModeModel> payModeList;
 
         public PayModePresenter(IPayModeView view, IPayModeRepository repository)
         {
+            this.payModeBindingSource= new BindingSource();
+
             this.view = view;
             this.repository = repository;
 
@@ -27,7 +29,7 @@ namespace Supermarker_MVP.Presenters
             this.view.SaveEvent += SavePayMode;
             this.view.CancelEvent += CancelAction;
 
-            this.view.SetPayModeListBildingSource(payModeBindinSource);
+            this.view.SetPayModeListBildingSource(payModeBindingSource);
             LoadAllPayModeList();
             this.view.show();
         }
@@ -35,7 +37,7 @@ namespace Supermarker_MVP.Presenters
         private void LoadAllPayModeList()
         {
             payModeList = repository.GetAll();
-            payModeBindinSource.DataSource = payModeList;
+            payModeBindingSource.DataSource = payModeList;
         }
 
         private void CancelAction(object? sender, EventArgs e)
@@ -74,7 +76,7 @@ namespace Supermarker_MVP.Presenters
             {
                 payModeList = repository.GetAll();
             }
-            payModeBindinSource.DataSource = payModeList;
+            payModeBindingSource.DataSource = payModeList;
         }
     }
 }
