@@ -21,6 +21,7 @@ namespace Supermarker_MVP.Views
             InitializeComponent();
             AssociateAndRaiseViewEvents();
             tabControl1.TabPages.Remove(tabPagePayModeDetail);
+            this.Show();
         }
 
         private void AssociateAndRaiseViewEvents()
@@ -157,6 +158,11 @@ namespace Supermarker_MVP.Views
         }
 
         private void BtnNew_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtPayModeId_TextChanged(object sender, EventArgs e)
         {
 
         }

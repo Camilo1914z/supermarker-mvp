@@ -66,17 +66,19 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(920, 150);
+            this.panel1.Size = new System.Drawing.Size(644, 90);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Supermarker_MVP.Properties.Resources.buy;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(172, 95);
+            this.pictureBox1.Size = new System.Drawing.Size(120, 57);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -86,9 +88,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(181, 29);
+            this.label1.Location = new System.Drawing.Point(127, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 32);
+            this.label1.Size = new System.Drawing.Size(87, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pay Mode";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -97,9 +100,10 @@
             // 
             this.panel2.Controls.Add(this.tabControl1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 150);
+            this.panel2.Location = new System.Drawing.Point(0, 90);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(920, 409);
+            this.panel2.Size = new System.Drawing.Size(644, 245);
             this.panel2.TabIndex = 1;
             // 
             // tabControl1
@@ -108,9 +112,10 @@
             this.tabControl1.Controls.Add(this.tabPagePayModeDetail);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(920, 409);
+            this.tabControl1.Size = new System.Drawing.Size(644, 245);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPagePayModeList
@@ -123,10 +128,11 @@
             this.tabPagePayModeList.Controls.Add(this.BtnSearch);
             this.tabPagePayModeList.Controls.Add(this.TxtSearch);
             this.tabPagePayModeList.Controls.Add(this.label2);
-            this.tabPagePayModeList.Location = new System.Drawing.Point(4, 34);
+            this.tabPagePayModeList.Location = new System.Drawing.Point(4, 24);
+            this.tabPagePayModeList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPagePayModeList.Name = "tabPagePayModeList";
-            this.tabPagePayModeList.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePayModeList.Size = new System.Drawing.Size(912, 371);
+            this.tabPagePayModeList.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPagePayModeList.Size = new System.Drawing.Size(636, 217);
             this.tabPagePayModeList.TabIndex = 0;
             this.tabPagePayModeList.Text = "Pay Mode List";
             this.tabPagePayModeList.UseVisualStyleBackColor = true;
@@ -134,9 +140,10 @@
             // 
             // BtnClose
             // 
-            this.BtnClose.Location = new System.Drawing.Point(681, 202);
+            this.BtnClose.Location = new System.Drawing.Point(477, 121);
+            this.BtnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(121, 40);
+            this.BtnClose.Size = new System.Drawing.Size(85, 24);
             this.BtnClose.TabIndex = 8;
             this.BtnClose.Text = "Close";
             this.BtnClose.UseVisualStyleBackColor = true;
@@ -144,9 +151,10 @@
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(681, 131);
+            this.BtnDelete.Location = new System.Drawing.Point(477, 79);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(121, 40);
+            this.BtnDelete.Size = new System.Drawing.Size(85, 24);
             this.BtnDelete.TabIndex = 7;
             this.BtnDelete.Text = "Delete";
             this.BtnDelete.UseVisualStyleBackColor = true;
@@ -154,9 +162,10 @@
             // 
             // BtnEdit
             // 
-            this.BtnEdit.Location = new System.Drawing.Point(681, 63);
+            this.BtnEdit.Location = new System.Drawing.Point(477, 38);
+            this.BtnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(121, 40);
+            this.BtnEdit.Size = new System.Drawing.Size(85, 24);
             this.BtnEdit.TabIndex = 6;
             this.BtnEdit.Text = "Edit";
             this.BtnEdit.UseVisualStyleBackColor = true;
@@ -164,9 +173,10 @@
             // 
             // BtnNew
             // 
-            this.BtnNew.Location = new System.Drawing.Point(681, 7);
+            this.BtnNew.Location = new System.Drawing.Point(477, 4);
+            this.BtnNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnNew.Name = "BtnNew";
-            this.BtnNew.Size = new System.Drawing.Size(121, 40);
+            this.BtnNew.Size = new System.Drawing.Size(85, 24);
             this.BtnNew.TabIndex = 5;
             this.BtnNew.Text = "New";
             this.BtnNew.UseVisualStyleBackColor = true;
@@ -176,13 +186,15 @@
             // 
             this.DgPayMode.AllowUserToAddRows = false;
             this.DgPayMode.AllowUserToDeleteRows = false;
+            this.DgPayMode.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgPayMode.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgPayMode.Location = new System.Drawing.Point(8, 63);
+            this.DgPayMode.Location = new System.Drawing.Point(6, 38);
+            this.DgPayMode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DgPayMode.Name = "DgPayMode";
             this.DgPayMode.ReadOnly = true;
             this.DgPayMode.RowHeadersWidth = 62;
             this.DgPayMode.RowTemplate.Height = 33;
-            this.DgPayMode.Size = new System.Drawing.Size(584, 197);
+            this.DgPayMode.Size = new System.Drawing.Size(409, 118);
             this.DgPayMode.TabIndex = 3;
             this.DgPayMode.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgPayMode_CellContentClick);
             // 
@@ -190,9 +202,10 @@
             // 
             this.BtnSearch.Image = global::Supermarker_MVP.Properties.Resources.search_small;
             this.BtnSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnSearch.Location = new System.Drawing.Point(487, 0);
+            this.BtnSearch.Location = new System.Drawing.Point(341, 0);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(114, 45);
+            this.BtnSearch.Size = new System.Drawing.Size(80, 27);
             this.BtnSearch.TabIndex = 2;
             this.BtnSearch.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnSearch.UseVisualStyleBackColor = true;
@@ -200,19 +213,21 @@
             // 
             // TxtSearch
             // 
-            this.TxtSearch.Location = new System.Drawing.Point(216, 7);
+            this.TxtSearch.Location = new System.Drawing.Point(151, 4);
+            this.TxtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtSearch.Name = "TxtSearch";
             this.TxtSearch.PlaceholderText = "Data to search";
-            this.TxtSearch.Size = new System.Drawing.Size(265, 31);
+            this.TxtSearch.Size = new System.Drawing.Size(187, 23);
             this.TxtSearch.TabIndex = 1;
             this.TxtSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 7);
+            this.label2.Location = new System.Drawing.Point(35, 4);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 25);
+            this.label2.Size = new System.Drawing.Size(98, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "Seatch Pay Mode";
             // 
@@ -226,10 +241,11 @@
             this.tabPagePayModeDetail.Controls.Add(this.label5);
             this.tabPagePayModeDetail.Controls.Add(this.label4);
             this.tabPagePayModeDetail.Controls.Add(this.label3);
-            this.tabPagePayModeDetail.Location = new System.Drawing.Point(4, 34);
+            this.tabPagePayModeDetail.Location = new System.Drawing.Point(4, 24);
+            this.tabPagePayModeDetail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPagePayModeDetail.Name = "tabPagePayModeDetail";
-            this.tabPagePayModeDetail.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePayModeDetail.Size = new System.Drawing.Size(792, 262);
+            this.tabPagePayModeDetail.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPagePayModeDetail.Size = new System.Drawing.Size(636, 217);
             this.tabPagePayModeDetail.TabIndex = 1;
             this.tabPagePayModeDetail.Text = "Pay Mode Detail";
             this.tabPagePayModeDetail.UseVisualStyleBackColor = true;
@@ -237,9 +253,10 @@
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(270, 210);
+            this.BtnCancel.Location = new System.Drawing.Point(189, 126);
+            this.BtnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(112, 34);
+            this.BtnCancel.Size = new System.Drawing.Size(78, 20);
             this.BtnCancel.TabIndex = 8;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseVisualStyleBackColor = true;
@@ -247,72 +264,81 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(80, 210);
+            this.BtnSave.Location = new System.Drawing.Point(56, 126);
+            this.BtnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(112, 34);
+            this.BtnSave.Size = new System.Drawing.Size(78, 20);
             this.BtnSave.TabIndex = 7;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = true;
             // 
             // TxtPayModeObservation
             // 
-            this.TxtPayModeObservation.Location = new System.Drawing.Point(87, 153);
+            this.TxtPayModeObservation.Location = new System.Drawing.Point(61, 92);
+            this.TxtPayModeObservation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtPayModeObservation.Multiline = true;
             this.TxtPayModeObservation.Name = "TxtPayModeObservation";
             this.TxtPayModeObservation.PlaceholderText = "Pau Mode Observation";
-            this.TxtPayModeObservation.Size = new System.Drawing.Size(172, 46);
+            this.TxtPayModeObservation.Size = new System.Drawing.Size(122, 32);
             this.TxtPayModeObservation.TabIndex = 5;
             // 
             // TxtPayModeName
             // 
-            this.TxtPayModeName.Location = new System.Drawing.Point(99, 88);
+            this.TxtPayModeName.Location = new System.Drawing.Point(69, 53);
+            this.TxtPayModeName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtPayModeName.Name = "TxtPayModeName";
             this.TxtPayModeName.PlaceholderText = "Pay Mode Name";
-            this.TxtPayModeName.Size = new System.Drawing.Size(150, 31);
+            this.TxtPayModeName.Size = new System.Drawing.Size(106, 23);
             this.TxtPayModeName.TabIndex = 4;
             // 
             // TxtPayModeId
             // 
-            this.TxtPayModeId.Location = new System.Drawing.Point(87, 28);
+            this.TxtPayModeId.Location = new System.Drawing.Point(61, 17);
+            this.TxtPayModeId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtPayModeId.Name = "TxtPayModeId";
-            this.TxtPayModeId.Size = new System.Drawing.Size(150, 31);
+            this.TxtPayModeId.Size = new System.Drawing.Size(106, 23);
             this.TxtPayModeId.TabIndex = 3;
+            this.TxtPayModeId.TextChanged += new System.EventHandler(this.TxtPayModeId_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(66, 122);
+            this.label5.Location = new System.Drawing.Point(46, 73);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(193, 25);
+            this.label5.Size = new System.Drawing.Size(127, 15);
             this.label5.TabIndex = 2;
             this.label5.Text = "Pay Mode Observation";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 57);
+            this.label4.Location = new System.Drawing.Point(25, 34);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 25);
+            this.label4.Size = new System.Drawing.Size(95, 15);
             this.label4.TabIndex = 1;
             this.label4.Text = "Pay Mode Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 3);
+            this.label3.Location = new System.Drawing.Point(25, 2);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 25);
+            this.label3.Size = new System.Drawing.Size(73, 15);
             this.label3.TabIndex = 0;
             this.label3.Text = "Pay Mode Id";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // PayModeView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 559);
+            this.ClientSize = new System.Drawing.Size(644, 335);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PayModeView";
             this.Text = "Pay Mode Management";
             this.Load += new System.EventHandler(this.PayModeView_Load);
