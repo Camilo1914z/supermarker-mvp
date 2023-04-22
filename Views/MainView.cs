@@ -50,5 +50,10 @@ namespace Supermarker_MVP.Views
         {
             
         }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

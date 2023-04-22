@@ -17,8 +17,8 @@ namespace Supermarker_MVP.Models
         [StringLength(50,MinimumLength =3, ErrorMessage ="Pay mode name mus be between 3 and 50 characters")]
         public string Name { get; set; }
 
-        [DisplayName("Obersations")]
-        [Required(ErrorMessage = "Pay mode obersation is required")]
+        [DisplayName("Pay Mode Observations")]
+        [Required(ErrorMessage = "Pay mode observation is required")]
         [StringLength(200,MinimumLength=3, ErrorMessage ="Pay mode observations must be between 3 and 200 characters")]
         public string Observation { get; set; }
 

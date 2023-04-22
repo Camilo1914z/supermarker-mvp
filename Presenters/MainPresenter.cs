@@ -9,7 +9,7 @@ using Supermarker_MVP._Repositories;
 
 namespace Supermarker_MVP.Presenters
 {
-    internal class MainPresenter
+    internal class MainPresenter 
     {
 
         public readonly IMainView mainView;
@@ -25,7 +25,7 @@ namespace Supermarker_MVP.Presenters
 
         }
         private void ShowPayModeView(object? sender, EventArgs e) {
-            IPayModeView view = new PayModeView();
+            IPayModeView view = PayModeView.GetInstance((MainView)mainView);
             IPayModeRepository repository= new PayModeRepository(sqlConnectionString);
             new PayModePresenter(view, repository);
         }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnClose = new System.Windows.Forms.Button();
             this.BtnPayMode = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BtnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +46,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(214, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // BtnClose
+            // 
+            this.BtnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnClose.BackgroundImage = global::Supermarker_MVP.Properties.Resources.cerrar;
+            this.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnClose.Location = new System.Drawing.Point(0, 376);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Size = new System.Drawing.Size(214, 74);
+            this.BtnClose.TabIndex = 3;
+            this.BtnClose.UseVisualStyleBackColor = true;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // BtnPayMode
             // 
@@ -71,23 +83,13 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // BtnClose
-            // 
-            this.BtnClose.BackgroundImage = global::Supermarker_MVP.Properties.Resources.cerrar;
-            this.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnClose.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BtnClose.Location = new System.Drawing.Point(0, 416);
-            this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(214, 34);
-            this.BtnClose.TabIndex = 3;
-            this.BtnClose.UseVisualStyleBackColor = true;
-            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
+            this.IsMdiContainer = true;
             this.Name = "MainView";
             this.Text = "Supermarket";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

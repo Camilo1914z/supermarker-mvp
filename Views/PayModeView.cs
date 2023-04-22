@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Supermarker_MVP.Views
 {
-    public partial class PayModeView : Form ,IPayModeView
+    public partial class PayModeView : Form, IPayModeView
     {
         private bool isEdit;
         private bool isSuccesssful;
@@ -38,8 +38,8 @@ namespace Supermarker_MVP.Views
 
         public string PayModeId {
             get { return TxtPayModeId.Text; }
-            set { TxtPayModeId.Text=value; }
-        
+            set { TxtPayModeId.Text = value; }
+
         }
         public string PayModeName {
             get { return TxtPayModeName.Text; }
@@ -68,7 +68,7 @@ namespace Supermarker_MVP.Views
             set { message = value; }
         }
 
-      
+
 
         public event EventHandler SearchEvent;
         public event EventHandler AddNewEvent;
@@ -116,6 +116,29 @@ namespace Supermarker_MVP.Views
         {
             DgPayMode.DataSource = payModelList;
         }
+        private static PayModeView instance;
+
+        public static PayModeView GetInstance(Form parentContainer) {
+            if (instance == null || instance.IsDisposed) {
+                instance = new PayModeView();
+                instance.MdiParent = parentContainer;
+            }
+
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized)
+                {
+
+                    instance.WindowState = FormWindowState.Normal;
+
+                }
+                instance.BringToFront();
+            }
+            return instance;
+        }
+
+    
+
 
         public void show()
         {
