@@ -30,7 +30,7 @@ namespace Supermarker_MVP.Views
 
         void SetPayModeListBildingSource(BindingSource payModelList);
 
-        void show();
+        void Show();
 
 
         }

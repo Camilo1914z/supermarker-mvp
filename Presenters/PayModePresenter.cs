@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,8 +31,9 @@ namespace Supermarker_MVP.Presenters
 
             this.view.SetPayModeListBildingSource(payModeBindingSource);
             LoadAllPayModeList();
-            this.view.show();
+            this.view.Show();
         }
+
 
         private void LoadAllPayModeList()
         {
@@ -42,27 +43,86 @@ namespace Supermarker_MVP.Presenters
 
         private void CancelAction(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            CleanViewFields();
         }
 
         private void SavePayMode(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var payMode = new PayModeModel();
+            payMode.Id = Convert.ToInt32(view.PayModeId);
+            payMode.Name = view.PayModeName;
+            payMode.Observation = view.PayModeObservation;
+
+            try
+            {
+                new Common.ModelDataValidation().Validate(payMode);
+                if (view.IsEdit)
+                {
+                    repository.Edit(payMode);
+                    view.Message = "PayMode edited successsfuly";
+                }
+                else
+                {
+                    repository.Add(payMode);
+                    view.Message = "PayMode added successsfuly";
+                }
+                view.IsSuccesssful = true;
+                LoadAllPayModeList();
+                CleanViewFields();
+
+            }
+            catch (Exception ex)
+            {
+                //si ocurre una excepcion se configura Issuccesful en falso 
+                //la propiedad message de la vista se asigna el mensaje de exception
+                view.IsSuccesssful = false;
+                view.Message = ex.Message;
+            }
+        }
+
+        private void CleanViewFields()
+        {
+            view.PayModeId = "0";
+            view.PayModeName = "";
+            view.PayModeObservation = "";
         }
 
         private void DelectSelectPayMode(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {//se recupera el objeto de la fila seleccionada
+                var payMode = (PayModeModel)payModeBindingSource.Current;
+
+                repository.Delete(payMode.Id);
+                view.IsSuccesssful = true;
+                view.Message = "Pay Mode deleted successsfully";
+                LoadAllPayModeList();
+            }
+            catch (Exception ex)
+            {
+                view.IsSuccesssful = false;
+                view.Message = "An error ocurred, could not delete pay mode";
+
+            }
         }
 
         private void LoadSelectPayModeToEdit(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //obtiene el objeto del datagridview 
+            var payMode = (PayModeModel)payModeBindingSource.Current;
+
+            //se cambia el contenido de la caja de texto por el objeto recuperado
+            view.PayModeId = payMode.Id.ToString();
+            view.PayModeName = payMode.Name;
+            view.PayModeObservation = payMode.Observation;
+
+            //modo edicion
+            view.IsEdit = true;
         }
 
         private void AddNewPayMode(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            view.IsEdit = false;
         }
 
         private void SearchPayMode(object? sender, EventArgs e)
@@ -78,5 +138,7 @@ namespace Supermarker_MVP.Presenters
             }
             payModeBindingSource.DataSource = payModeList;
         }
+
+
     }
 }

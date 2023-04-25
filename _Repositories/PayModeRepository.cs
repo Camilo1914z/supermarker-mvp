@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,32 +13,65 @@ namespace Supermarker_MVP._Repositories
     internal class PayModeRepository : BaseRepository, IPayModeRepository
     {
         public PayModeRepository(string connectionString) { 
-        this.conectionString = connectionString;
+        this.connectionString = connectionString;
         }
 
 
-  
 
 
-        public void add(PayModeModel payModeModel)
+
+        public void Add(PayModeModel payModeModel)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "INSERT INTO PayMode VALUES (@name, @observation)";
+                command.Parameters.Add("@name", SqlDbType.NVarChar).Value = payModeModel.Name;
+                command.Parameters.Add("@observation", SqlDbType.NVarChar).Value = payModeModel.Observation;
+                command.ExecuteNonQuery();
+            }
         }
 
-        public void delete(int id)
+        public void Delete(int id)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "DELETE FROM PayMode WHERE Pay_Mode_Id=@id";
+                command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                command.ExecuteNonQuery();
+            }
+
+
         }
 
-        public void edit(PayModeModel payModeModel)
+        public void Edit(PayModeModel payModeModel)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = @"UPDATE  PayMode
+                                        SET Pay_Mode_Name =@name,
+                                        Pay_Mode_Observation=@observation
+                                        WHERE Pay_Mode_Id=@id";
+                command.Parameters.Add("@name", SqlDbType.NVarChar).Value = payModeModel.Name;
+                command.Parameters.Add("@observation", SqlDbType.NVarChar).Value = payModeModel.Observation;
+                command.Parameters.Add("@id", SqlDbType.Int).Value = payModeModel.Id;
+                command.ExecuteNonQuery();
+            }
+
         }
 
         public IEnumerable<PayModeModel> GetAll()
         {
             var payModeList = new List<PayModeModel>();
-            using (var connection = new SqlConnection(conectionString))
+            using (var connection = new SqlConnection(connectionString))
             using (var command = new SqlCommand())
             {
                 connection.Open();
@@ -67,13 +100,13 @@ namespace Supermarker_MVP._Repositories
             var payModeList=new List<PayModeModel>();
             int payModeId = int.TryParse(value, out _) ? Convert.ToInt32(value):0;
             string payModeName = value;
-            using (var connection = new SqlConnection(conectionString))
+            using (var connection = new SqlConnection(connectionString))
             using (var command = new SqlCommand()) 
             {
                 connection.Open();
                 command.Connection = connection;
                 command.CommandText = @"SELECT * FROM PayMode
-                                        WHERE Pay_Mode_Id=@id  or Pay_Mode_Name                      LIKE @name+ '&'
+                                        WHERE Pay_Mode_Id=@id  or Pay_Mode_Name                           LIKE @name+ '&'
                                         ORDER By  Pay_Mode_Id DESC";
 
                 command.Parameters.Add("@id", SqlDbType.Int).Value=payModeId;

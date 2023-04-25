@@ -8,6 +8,6 @@ namespace Supermarker_MVP._Repositories
 {
     internal class BaseRepository
     {
-        protected string conectionString;
+        protected string connectionString;
     }
 }
