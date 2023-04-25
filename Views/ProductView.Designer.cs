@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabProductList = new System.Windows.Forms.TabPage();
-            this.tabProductDetail = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.TxtSearch = new System.Windows.Forms.TextBox();
-            this.DgProduct = new System.Windows.Forms.DataGridView();
             this.BtnClose = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
             this.BtnNew = new System.Windows.Forms.Button();
+            this.DgProduct = new System.Windows.Forms.DataGridView();
+            this.TxtSearch = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabProductDetail = new System.Windows.Forms.TabPage();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
             this.TxtPayModeObservation = new System.Windows.Forms.TextBox();
@@ -51,12 +51,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabProductList.SuspendLayout();
-            this.tabProductDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgProduct)).BeginInit();
+            this.tabProductDetail.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,14 +69,16 @@
             this.panel1.Size = new System.Drawing.Size(949, 150);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // label1
             // 
-            this.panel2.Controls.Add(this.tabControl1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 150);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(949, 407);
-            this.panel2.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(228, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 32);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Products";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -88,15 +90,14 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // panel2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(228, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 32);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Products";
+            this.panel2.Controls.Add(this.tabControl1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 150);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(949, 407);
+            this.panel2.TabIndex = 1;
             // 
             // tabControl1
             // 
@@ -126,59 +127,6 @@
             this.tabProductList.Text = "Product List";
             this.tabProductList.UseVisualStyleBackColor = true;
             this.tabProductList.Click += new System.EventHandler(this.tabProductList_Click);
-            // 
-            // tabProductDetail
-            // 
-            this.tabProductDetail.Controls.Add(this.BtnCancel);
-            this.tabProductDetail.Controls.Add(this.BtnSave);
-            this.tabProductDetail.Controls.Add(this.TxtPayModeObservation);
-            this.tabProductDetail.Controls.Add(this.TxtPayModeName);
-            this.tabProductDetail.Controls.Add(this.TxtPayModeId);
-            this.tabProductDetail.Controls.Add(this.label5);
-            this.tabProductDetail.Controls.Add(this.label4);
-            this.tabProductDetail.Controls.Add(this.label3);
-            this.tabProductDetail.Location = new System.Drawing.Point(4, 34);
-            this.tabProductDetail.Name = "tabProductDetail";
-            this.tabProductDetail.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProductDetail.Size = new System.Drawing.Size(941, 369);
-            this.tabProductDetail.TabIndex = 1;
-            this.tabProductDetail.Text = "Product Detail";
-            this.tabProductDetail.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Search";
-            // 
-            // TxtSearch
-            // 
-            this.TxtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtSearch.Location = new System.Drawing.Point(156, 27);
-            this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.PlaceholderText = "Data to search";
-            this.TxtSearch.Size = new System.Drawing.Size(344, 31);
-            this.TxtSearch.TabIndex = 2;
-            // 
-            // DgProduct
-            // 
-            this.DgProduct.AllowUserToAddRows = false;
-            this.DgProduct.AllowUserToDeleteRows = false;
-            this.DgProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DgProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgProduct.Location = new System.Drawing.Point(35, 89);
-            this.DgProduct.Name = "DgProduct";
-            this.DgProduct.ReadOnly = true;
-            this.DgProduct.RowHeadersWidth = 62;
-            this.DgProduct.RowTemplate.Height = 33;
-            this.DgProduct.Size = new System.Drawing.Size(584, 272);
-            this.DgProduct.TabIndex = 4;
             // 
             // BtnClose
             // 
@@ -219,6 +167,59 @@
             this.BtnNew.TabIndex = 10;
             this.BtnNew.Text = "New";
             this.BtnNew.UseVisualStyleBackColor = true;
+            // 
+            // DgProduct
+            // 
+            this.DgProduct.AllowUserToAddRows = false;
+            this.DgProduct.AllowUserToDeleteRows = false;
+            this.DgProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DgProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgProduct.Location = new System.Drawing.Point(35, 89);
+            this.DgProduct.Name = "DgProduct";
+            this.DgProduct.ReadOnly = true;
+            this.DgProduct.RowHeadersWidth = 62;
+            this.DgProduct.RowTemplate.Height = 33;
+            this.DgProduct.Size = new System.Drawing.Size(584, 272);
+            this.DgProduct.TabIndex = 4;
+            // 
+            // TxtSearch
+            // 
+            this.TxtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtSearch.Location = new System.Drawing.Point(156, 27);
+            this.TxtSearch.Name = "TxtSearch";
+            this.TxtSearch.PlaceholderText = "Data to search";
+            this.TxtSearch.Size = new System.Drawing.Size(344, 31);
+            this.TxtSearch.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(71, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Search";
+            // 
+            // tabProductDetail
+            // 
+            this.tabProductDetail.Controls.Add(this.BtnCancel);
+            this.tabProductDetail.Controls.Add(this.BtnSave);
+            this.tabProductDetail.Controls.Add(this.TxtPayModeObservation);
+            this.tabProductDetail.Controls.Add(this.TxtPayModeName);
+            this.tabProductDetail.Controls.Add(this.TxtPayModeId);
+            this.tabProductDetail.Controls.Add(this.label5);
+            this.tabProductDetail.Controls.Add(this.label4);
+            this.tabProductDetail.Controls.Add(this.label3);
+            this.tabProductDetail.Location = new System.Drawing.Point(4, 34);
+            this.tabProductDetail.Name = "tabProductDetail";
+            this.tabProductDetail.Padding = new System.Windows.Forms.Padding(3);
+            this.tabProductDetail.Size = new System.Drawing.Size(941, 369);
+            this.tabProductDetail.TabIndex = 1;
+            this.tabProductDetail.Text = "Product Detail";
+            this.tabProductDetail.UseVisualStyleBackColor = true;
             // 
             // BtnCancel
             // 
@@ -306,14 +307,14 @@
             this.Load += new System.EventHandler(this.ProductView_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabProductList.ResumeLayout(false);
             this.tabProductList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgProduct)).EndInit();
             this.tabProductDetail.ResumeLayout(false);
             this.tabProductDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgProduct)).EndInit();
             this.ResumeLayout(false);
 
         }
