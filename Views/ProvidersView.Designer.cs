@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabProvidersList = new System.Windows.Forms.TabPage();
-            this.tabProvidersDetail = new System.Windows.Forms.TabPage();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
@@ -43,21 +42,22 @@
             this.DgProviders = new System.Windows.Forms.DataGridView();
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.tabProvidersDetail = new System.Windows.Forms.TabPage();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
             this.TxtProvidersObservation = new System.Windows.Forms.TextBox();
-            this.TxtProductsName = new System.Windows.Forms.TextBox();
+            this.TxtProvidersName = new System.Windows.Forms.TextBox();
             this.TxtProvidersId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabProvidersList.SuspendLayout();
-            this.tabProvidersDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgProviders)).BeginInit();
+            this.tabProvidersDetail.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,14 +70,15 @@
             this.panel1.Size = new System.Drawing.Size(1056, 150);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // pictureBox1
             // 
-            this.panel2.Controls.Add(this.tabControl1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 150);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1056, 454);
-            this.panel2.TabIndex = 1;
+            this.pictureBox1.Image = global::Supermarker_MVP.Properties.Resources.providers;
+            this.pictureBox1.Location = new System.Drawing.Point(32, 29);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 79);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -89,15 +90,14 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Providers";
             // 
-            // pictureBox1
+            // panel2
             // 
-            this.pictureBox1.Image = global::Supermarker_MVP.Properties.Resources.providers;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 29);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 79);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.panel2.Controls.Add(this.tabControl1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 150);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1056, 454);
+            this.panel2.TabIndex = 1;
             // 
             // tabControl1
             // 
@@ -127,24 +127,6 @@
             this.tabProvidersList.TabIndex = 0;
             this.tabProvidersList.Text = "Providers List";
             this.tabProvidersList.UseVisualStyleBackColor = true;
-            // 
-            // tabProvidersDetail
-            // 
-            this.tabProvidersDetail.Controls.Add(this.BtnCancel);
-            this.tabProvidersDetail.Controls.Add(this.BtnSave);
-            this.tabProvidersDetail.Controls.Add(this.TxtProvidersObservation);
-            this.tabProvidersDetail.Controls.Add(this.TxtProductsName);
-            this.tabProvidersDetail.Controls.Add(this.TxtProvidersId);
-            this.tabProvidersDetail.Controls.Add(this.label5);
-            this.tabProvidersDetail.Controls.Add(this.label4);
-            this.tabProvidersDetail.Controls.Add(this.label3);
-            this.tabProvidersDetail.Location = new System.Drawing.Point(4, 34);
-            this.tabProvidersDetail.Name = "tabProvidersDetail";
-            this.tabProvidersDetail.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProvidersDetail.Size = new System.Drawing.Size(1048, 416);
-            this.tabProvidersDetail.TabIndex = 1;
-            this.tabProvidersDetail.Text = "Providers Detail";
-            this.tabProvidersDetail.UseVisualStyleBackColor = true;
             // 
             // BtnSearch
             // 
@@ -233,6 +215,24 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Search";
             // 
+            // tabProvidersDetail
+            // 
+            this.tabProvidersDetail.Controls.Add(this.BtnCancel);
+            this.tabProvidersDetail.Controls.Add(this.BtnSave);
+            this.tabProvidersDetail.Controls.Add(this.TxtProvidersObservation);
+            this.tabProvidersDetail.Controls.Add(this.TxtProvidersName);
+            this.tabProvidersDetail.Controls.Add(this.TxtProvidersId);
+            this.tabProvidersDetail.Controls.Add(this.label5);
+            this.tabProvidersDetail.Controls.Add(this.label4);
+            this.tabProvidersDetail.Controls.Add(this.label3);
+            this.tabProvidersDetail.Location = new System.Drawing.Point(4, 34);
+            this.tabProvidersDetail.Name = "tabProvidersDetail";
+            this.tabProvidersDetail.Padding = new System.Windows.Forms.Padding(3);
+            this.tabProvidersDetail.Size = new System.Drawing.Size(1048, 416);
+            this.tabProvidersDetail.TabIndex = 1;
+            this.tabProvidersDetail.Text = "Providers Detail";
+            this.tabProvidersDetail.UseVisualStyleBackColor = true;
+            // 
             // BtnCancel
             // 
             this.BtnCancel.Location = new System.Drawing.Point(781, 309);
@@ -260,13 +260,13 @@
             this.TxtProvidersObservation.Size = new System.Drawing.Size(292, 77);
             this.TxtProvidersObservation.TabIndex = 22;
             // 
-            // TxtProductsName
+            // TxtProvidersName
             // 
-            this.TxtProductsName.Location = new System.Drawing.Point(123, 162);
-            this.TxtProductsName.Name = "TxtProductsName";
-            this.TxtProductsName.PlaceholderText = "Product Name";
-            this.TxtProductsName.Size = new System.Drawing.Size(292, 31);
-            this.TxtProductsName.TabIndex = 21;
+            this.TxtProvidersName.Location = new System.Drawing.Point(123, 162);
+            this.TxtProvidersName.Name = "TxtProvidersName";
+            this.TxtProvidersName.PlaceholderText = "Product Name";
+            this.TxtProvidersName.Size = new System.Drawing.Size(292, 31);
+            this.TxtProvidersName.TabIndex = 21;
             // 
             // TxtProvidersId
             // 
@@ -315,16 +315,17 @@
             this.Controls.Add(this.panel1);
             this.Name = "ProvidersView";
             this.Text = "Providers";
+            this.Load += new System.EventHandler(this.ProvidersView_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabProvidersList.ResumeLayout(false);
             this.tabProvidersList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgProviders)).EndInit();
             this.tabProvidersDetail.ResumeLayout(false);
             this.tabProvidersDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgProviders)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -349,7 +350,7 @@
         private Button BtnCancel;
         private Button BtnSave;
         private TextBox TxtProvidersObservation;
-        private TextBox TxtProductsName;
+        private TextBox TxtProvidersName;
         private TextBox TxtProvidersId;
         private Label label5;
         private Label label4;

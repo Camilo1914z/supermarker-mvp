@@ -8,6 +8,7 @@ namespace Supermarker_MVP.Views
 {
     internal interface IProvidersView
     {
+        string ProvidersId { get; set; }
         string ProvidersName { get; set; }
         string ProvidersObservation { get; set; }
 
