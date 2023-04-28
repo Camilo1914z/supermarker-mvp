@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnProduct = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
             this.BtnPayMode = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BtbProducts = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.BtbProducts);
+            this.panel1.Controls.Add(this.BtnProduct);
             this.panel1.Controls.Add(this.BtnClose);
             this.panel1.Controls.Add(this.BtnPayMode);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -48,6 +48,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(214, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // BtnProduct
+            // 
+            this.BtnProduct.BackgroundImage = global::Supermarker_MVP.Properties.Resources.products;
+            this.BtnProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnProduct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnProduct.Location = new System.Drawing.Point(0, 147);
+            this.BtnProduct.Name = "BtnProduct";
+            this.BtnProduct.Size = new System.Drawing.Size(214, 72);
+            this.BtnProduct.TabIndex = 4;
+            this.BtnProduct.UseVisualStyleBackColor = true;
             // 
             // BtnClose
             // 
@@ -85,17 +96,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // BtbProducts
-            // 
-            this.BtbProducts.BackgroundImage = global::Supermarker_MVP.Properties.Resources.products;
-            this.BtbProducts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtbProducts.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtbProducts.Location = new System.Drawing.Point(0, 147);
-            this.BtbProducts.Name = "BtbProducts";
-            this.BtbProducts.Size = new System.Drawing.Size(214, 72);
-            this.BtbProducts.TabIndex = 4;
-            this.BtbProducts.UseVisualStyleBackColor = true;
-            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -119,6 +119,6 @@
         private PictureBox pictureBox1;
         private Button BtnPayMode;
         private Button BtnClose;
-        private Button BtbProducts;
+        private Button BtnProduct;
     }
 }

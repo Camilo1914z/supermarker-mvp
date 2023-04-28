@@ -34,6 +34,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabProductList = new System.Windows.Forms.TabPage();
+            this.BtnSearch = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
@@ -44,9 +45,9 @@
             this.tabProductDetail = new System.Windows.Forms.TabPage();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
-            this.TxtPayModeObservation = new System.Windows.Forms.TextBox();
-            this.TxtPayModeName = new System.Windows.Forms.TextBox();
-            this.TxtPayModeId = new System.Windows.Forms.TextBox();
+            this.TxtProductDescription = new System.Windows.Forms.TextBox();
+            this.TxtProductName = new System.Windows.Forms.TextBox();
+            this.TxtProductId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -112,6 +113,7 @@
             // 
             // tabProductList
             // 
+            this.tabProductList.Controls.Add(this.BtnSearch);
             this.tabProductList.Controls.Add(this.BtnClose);
             this.tabProductList.Controls.Add(this.BtnDelete);
             this.tabProductList.Controls.Add(this.BtnEdit);
@@ -127,6 +129,18 @@
             this.tabProductList.Text = "Product List";
             this.tabProductList.UseVisualStyleBackColor = true;
             this.tabProductList.Click += new System.EventHandler(this.tabProductList_Click);
+            // 
+            // BtnSearch
+            // 
+            this.BtnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSearch.Image = global::Supermarker_MVP.Properties.Resources.search_small;
+            this.BtnSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnSearch.Location = new System.Drawing.Point(506, 22);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.Size = new System.Drawing.Size(114, 45);
+            this.BtnSearch.TabIndex = 14;
+            this.BtnSearch.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnSearch.UseVisualStyleBackColor = true;
             // 
             // BtnClose
             // 
@@ -207,9 +221,9 @@
             // 
             this.tabProductDetail.Controls.Add(this.BtnCancel);
             this.tabProductDetail.Controls.Add(this.BtnSave);
-            this.tabProductDetail.Controls.Add(this.TxtPayModeObservation);
-            this.tabProductDetail.Controls.Add(this.TxtPayModeName);
-            this.tabProductDetail.Controls.Add(this.TxtPayModeId);
+            this.tabProductDetail.Controls.Add(this.TxtProductDescription);
+            this.tabProductDetail.Controls.Add(this.TxtProductName);
+            this.tabProductDetail.Controls.Add(this.TxtProductId);
             this.tabProductDetail.Controls.Add(this.label5);
             this.tabProductDetail.Controls.Add(this.label4);
             this.tabProductDetail.Controls.Add(this.label3);
@@ -239,41 +253,41 @@
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = true;
             // 
-            // TxtPayModeObservation
+            // TxtProductDescription
             // 
-            this.TxtPayModeObservation.Location = new System.Drawing.Point(86, 240);
-            this.TxtPayModeObservation.Multiline = true;
-            this.TxtPayModeObservation.Name = "TxtPayModeObservation";
-            this.TxtPayModeObservation.PlaceholderText = "Pau Mode Observation";
-            this.TxtPayModeObservation.Size = new System.Drawing.Size(292, 77);
-            this.TxtPayModeObservation.TabIndex = 14;
+            this.TxtProductDescription.Location = new System.Drawing.Point(86, 240);
+            this.TxtProductDescription.Multiline = true;
+            this.TxtProductDescription.Name = "TxtProductDescription";
+            this.TxtProductDescription.PlaceholderText = "Products Description";
+            this.TxtProductDescription.Size = new System.Drawing.Size(292, 77);
+            this.TxtProductDescription.TabIndex = 14;
             // 
-            // TxtPayModeName
+            // TxtProductName
             // 
-            this.TxtPayModeName.Location = new System.Drawing.Point(86, 142);
-            this.TxtPayModeName.Name = "TxtPayModeName";
-            this.TxtPayModeName.PlaceholderText = "Pay Mode Name";
-            this.TxtPayModeName.Size = new System.Drawing.Size(292, 31);
-            this.TxtPayModeName.TabIndex = 13;
+            this.TxtProductName.Location = new System.Drawing.Point(86, 142);
+            this.TxtProductName.Name = "TxtProductName";
+            this.TxtProductName.PlaceholderText = "Product Name";
+            this.TxtProductName.Size = new System.Drawing.Size(292, 31);
+            this.TxtProductName.TabIndex = 13;
             // 
-            // TxtPayModeId
+            // TxtProductId
             // 
-            this.TxtPayModeId.Location = new System.Drawing.Point(86, 75);
-            this.TxtPayModeId.Name = "TxtPayModeId";
-            this.TxtPayModeId.ReadOnly = true;
-            this.TxtPayModeId.Size = new System.Drawing.Size(292, 31);
-            this.TxtPayModeId.TabIndex = 12;
-            this.TxtPayModeId.Text = "0";
-            this.TxtPayModeId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtProductId.Location = new System.Drawing.Point(86, 75);
+            this.TxtProductId.Name = "TxtProductId";
+            this.TxtProductId.ReadOnly = true;
+            this.TxtProductId.Size = new System.Drawing.Size(292, 31);
+            this.TxtProductId.TabIndex = 12;
+            this.TxtProductId.Text = "0";
+            this.TxtProductId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(86, 195);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(193, 25);
+            this.label5.Size = new System.Drawing.Size(169, 25);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Pay Mode Observation";
+            this.label5.Text = "Product Description";
             // 
             // label4
             // 
@@ -290,9 +304,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(86, 34);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 25);
+            this.label3.Size = new System.Drawing.Size(95, 25);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Pay Mode Id";
+            this.label3.Text = "Product Id";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // ProductView
@@ -337,11 +351,12 @@
         private Button BtnNew;
         private Button BtnCancel;
         private Button BtnSave;
-        private TextBox TxtPayModeObservation;
-        private TextBox TxtPayModeName;
-        private TextBox TxtPayModeId;
+        private TextBox TxtProductDescription;
+        private TextBox TxtProductName;
+        private TextBox TxtProductId;
         private Label label5;
         private Label label4;
         private Label label3;
+        private Button BtnSearch;
     }
 }

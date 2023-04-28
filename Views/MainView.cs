@@ -19,6 +19,7 @@ namespace Supermarker_MVP.Views
         {
             InitializeComponent();
             BtnPayMode.Click += delegate { ShowPayModeView?.Invoke(this, EventArgs.Empty); };
+            BtnProduct.Click += delegate { ShowProductView?.Invoke(this, EventArgs.Empty); };
             BtnClose.Click += delegate { this.Close(); };
                     
         }
