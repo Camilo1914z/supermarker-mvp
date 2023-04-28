@@ -110,6 +110,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(949, 407);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabProductList
             // 
@@ -243,6 +244,7 @@
             this.BtnCancel.TabIndex = 16;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseVisualStyleBackColor = true;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // BtnSave
             // 
@@ -252,6 +254,7 @@
             this.BtnSave.TabIndex = 15;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // TxtProductDescription
             // 
@@ -261,6 +264,7 @@
             this.TxtProductDescription.PlaceholderText = "Products Description";
             this.TxtProductDescription.Size = new System.Drawing.Size(292, 77);
             this.TxtProductDescription.TabIndex = 14;
+            this.TxtProductDescription.TextChanged += new System.EventHandler(this.TxtProductDescription_TextChanged);
             // 
             // TxtProductName
             // 
@@ -269,6 +273,7 @@
             this.TxtProductName.PlaceholderText = "Product Name";
             this.TxtProductName.Size = new System.Drawing.Size(292, 31);
             this.TxtProductName.TabIndex = 13;
+            this.TxtProductName.TextChanged += new System.EventHandler(this.TxtProductName_TextChanged);
             // 
             // TxtProductId
             // 
@@ -279,6 +284,7 @@
             this.TxtProductId.TabIndex = 12;
             this.TxtProductId.Text = "0";
             this.TxtProductId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtProductId.TextChanged += new System.EventHandler(this.TxtProductId_TextChanged);
             // 
             // label5
             // 
@@ -288,6 +294,7 @@
             this.label5.Size = new System.Drawing.Size(169, 25);
             this.label5.TabIndex = 11;
             this.label5.Text = "Product Description";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 

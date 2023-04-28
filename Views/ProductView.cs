@@ -197,5 +197,40 @@ namespace Supermarker_MVP.Views
             }
             return instance;
         }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtProductId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtProductName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtProductDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

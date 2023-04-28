@@ -56,5 +56,10 @@ namespace Supermarker_MVP.Views
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -33,12 +33,14 @@
             this.BtnClose = new System.Windows.Forms.Button();
             this.BtnPayMode = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnProviders = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.BtnProviders);
             this.panel1.Controls.Add(this.BtnProduct);
             this.panel1.Controls.Add(this.BtnClose);
             this.panel1.Controls.Add(this.BtnPayMode);
@@ -96,6 +98,18 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // BtnProviders
+            // 
+            this.BtnProviders.BackgroundImage = global::Supermarker_MVP.Properties.Resources.providers;
+            this.BtnProviders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnProviders.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnProviders.Location = new System.Drawing.Point(0, 219);
+            this.BtnProviders.Name = "BtnProviders";
+            this.BtnProviders.Size = new System.Drawing.Size(214, 72);
+            this.BtnProviders.TabIndex = 5;
+            this.BtnProviders.UseVisualStyleBackColor = true;
+            this.BtnProviders.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -120,5 +134,6 @@
         private Button BtnPayMode;
         private Button BtnClose;
         private Button BtnProduct;
+        private Button BtnProviders;
     }
 }
