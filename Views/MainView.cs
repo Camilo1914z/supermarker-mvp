@@ -15,11 +15,13 @@ namespace Supermarker_MVP.Views
         public event EventHandler ShowPayModeView;
         public event EventHandler ShowProductView;
         public event EventHandler showCustomerView;
+        public event EventHandler showProvidersView;
         public MainView()
         {
             InitializeComponent();
             BtnPayMode.Click += delegate { ShowPayModeView?.Invoke(this, EventArgs.Empty); };
             BtnProduct.Click += delegate { ShowProductView?.Invoke(this, EventArgs.Empty); };
+            BtnProviders.Click += delegate { showProvidersView?.Invoke(this, EventArgs.Empty); };
             BtnClose.Click += delegate { this.Close(); };
                     
         }

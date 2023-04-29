@@ -1,10 +1,10 @@
-﻿use Supermarker
-create table Product
+﻿use Customers
+create table PayMode
 (
- Product_Id int identity (100000,1) primary key,
- Product_Name nvarchar (50) not null,
- Product_Observation nvarchar (50) not null,
+ Customers_Id int identity (100000,1) primary key,
+ Customers_Name nvarchar (50) not null,
+ Customers_Observation nvarchar (50) not null,
 )
 go
-insert into Product values('Chicken', 'fresh chicken')
-insert into Product values('Milk', 'skimmed milk')
+insert into Customers values('Karen', 'Cumplida')
+insert into Customers values('Benedito', 'Incumpliddo')
