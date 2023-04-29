@@ -14,7 +14,7 @@ namespace Supermarker_MVP.Views
     {
         public event EventHandler ShowPayModeView;
         public event EventHandler ShowProductView;
-        public event EventHandler showCustomerView;
+        public event EventHandler showCustomersView;
         public event EventHandler showProvidersView;
         public MainView()
         {
@@ -22,6 +22,7 @@ namespace Supermarker_MVP.Views
             BtnPayMode.Click += delegate { ShowPayModeView?.Invoke(this, EventArgs.Empty); };
             BtnProduct.Click += delegate { ShowProductView?.Invoke(this, EventArgs.Empty); };
             BtnProviders.Click += delegate { showProvidersView?.Invoke(this, EventArgs.Empty); };
+            BtnCustomers.Click += delegate { showCustomersView?.Invoke(this, EventArgs.Empty); };
             BtnClose.Click += delegate { this.Close(); };
                     
         }
@@ -60,6 +61,11 @@ namespace Supermarker_MVP.Views
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnCustomers_Click(object sender, EventArgs e)
         {
 
         }

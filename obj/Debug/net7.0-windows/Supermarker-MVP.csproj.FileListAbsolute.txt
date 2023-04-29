@@ -44,3 +44,4 @@ C:\Users\camil\OneDrive\Escritorio\Taller\Supermarker-MVP\obj\Debug\net7.0-windo
 C:\Users\camil\OneDrive\Escritorio\Taller\Supermarker-MVP\obj\Debug\net7.0-windows\Supermarker_MVP.Views.MainView.resources
 C:\Users\camil\OneDrive\Escritorio\Taller\Supermarker-MVP\obj\Debug\net7.0-windows\Supermarker_MVP.Views.ProductView.resources
 C:\Users\camil\OneDrive\Escritorio\Taller\Supermarker-MVP\obj\Debug\net7.0-windows\Supermarker_MVP.Views.ProvidersView.resources
+C:\Users\camil\OneDrive\Escritorio\Taller\Supermarker-MVP\obj\Debug\net7.0-windows\Supermarker_MVP.Views.CustomersView.resources

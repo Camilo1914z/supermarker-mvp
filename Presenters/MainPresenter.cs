@@ -23,9 +23,13 @@ namespace Supermarker_MVP.Presenters
             this.mainView.ShowPayModeView += ShowPayModeView;
             this.mainView.ShowProductView += ShowProductView;
             this.mainView.showProvidersView += ShowProvidersView;
+            this.mainView.showCustomersView += ShowCustomersView;
 
 
         }
+
+      
+
         private void ShowPayModeView(object? sender, EventArgs e) {
             IPayModeView view = PayModeView.GetInstance((MainView)mainView);
             IPayModeRepository repository= new PayModeRepository(sqlConnectionString);
@@ -44,6 +48,13 @@ namespace Supermarker_MVP.Presenters
             IProvidersView view = ProvidersView.GetInstance((MainView)mainView);
             IProvidersRepository repository = new ProvidersRepository(sqlConnectionString);
             new ProvidersPresenter(view, repository);
+        }
+
+        private void ShowCustomersView(object? sender, EventArgs e)
+        {
+            ICustomersView view = CustomersView.GetInstance((MainView)mainView);
+            ICustomersRepository repository = new CustomersRepository(sqlConnectionString);
+            new CustomersPresenter(view, repository);
         }
 
     }

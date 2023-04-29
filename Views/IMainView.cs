@@ -10,7 +10,7 @@ namespace Supermarker_MVP.Views
     {
         event EventHandler ShowPayModeView;
         event EventHandler ShowProductView;
-        event EventHandler showCustomerView;
+        event EventHandler showCustomersView;
         event EventHandler showProvidersView;
 
 
